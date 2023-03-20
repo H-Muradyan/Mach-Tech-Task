@@ -13,11 +13,12 @@ const Footer = () => {
   const { socialPages } = footerDatas;
 
   return (
-    <div className="mt-20 md:mt-32 px-12 xl:px-20 ">
-      <div className="flex flex-col items-center md:flex-row md:items-start md:justify-between">
-        <FooterLogo />
+    <div className="mt-20 md:mt-32 px-7 xl:px-20 ">
+      <div className="relative flex flex-col items-center md:flex-row md:items-start md:justify-between md:space-x-4">
+        <FooterLogo widthSize={widthSize}/>
         {widthSize > 767 && <FooterNavbar />}
         <Social socialPages={socialPages} />
+       
       </div>
       <img
         width="100%"
@@ -25,9 +26,9 @@ const Footer = () => {
         src={widthSize > 767 ? footerLine : footerLineMob}
         alt="line"
       />
-      <p className="text-white font-bold text-sm text-center mb-20 md:mb-14">
-          {widthSize > 767 ? text : text.replaceAll("-", "")}
-        </p>
+      <p className="text-white font-bold tracking-widest leading-10 px-5 text-sm text-center mb-20 md:mb-14">
+        {widthSize > 767 ? text : text.replaceAll("-", "")}
+      </p>
     </div>
   );
 };

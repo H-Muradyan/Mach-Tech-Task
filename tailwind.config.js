@@ -3,17 +3,21 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      inset: {
+        105: "420px",
+      },
       width: {
-        "17.5": "70px",
+        17.5: "70px",
       },
       height: {
-        "17.5": "70px",
+        17.5: "70px",
       },
       screens: {
         desktop: "1440px",
       },
       borderRadius: {
         "4xl": "40px",
+        "6xl": "100px",
         mix: "100px 100px 100px 240px",
       },
       colors: {

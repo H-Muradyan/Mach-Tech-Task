@@ -8,14 +8,13 @@ import headerTextMob from "../../assets/images/headerTextMob.svg";
 import headerLogo from "../../assets/images/headerLogo.svg";
 import headerText from "../../assets/images/headerText.svg";
 
-import { Link } from "react-router-dom";
 
 const HeaderLogo = ({ widthSize }) => {
   return (
-      <Link className="flex cursor-pointer" to="/">
+      <a href="#" className="flex cursor-pointer">
         <img className="mr-3" src={widthSize < 1024 ? headerLogoMob : headerLogo} alt="logo" />
         <img src={widthSize < 1024 ? headerTextMob : headerText} alt="logoText" />
-      </Link>
+      </a>
   );
 };
 

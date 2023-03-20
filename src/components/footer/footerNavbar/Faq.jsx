@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Faq = ({ faqs }) => {
   return (
@@ -7,14 +6,14 @@ const Faq = ({ faqs }) => {
       <h4 className="text-white font-bold">F.A.Q</h4>
       {faqs &&
         faqs.map((faq) => (
-          <Link
+          <a
             key={faq.id}
-            to={faq.link}
+            href={faq.link}
             target={"_blank"}
-            className={`font-bold text-white hover:text-mobNavBg active:text-mobNavBg `}
+            className={`font-bold text-white md:text-xs lg:text-base hover:text-mobNavBg`}
           >
             {faq.text}
-          </Link>
+          </a>
         ))}
     </div>
   );

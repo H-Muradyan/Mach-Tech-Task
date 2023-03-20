@@ -10,27 +10,28 @@ export const footerDatas = {
     {
       id: 0,
       text: "ABOUT",
-      path: "/about",
+      link: "#about",
     },
     {
       id: 1,
       text: "SERVICES",
-      path: "/services",
+      link: "#services",
     },
     {
       id: 2,
       text: "TECHNOLOGIES",
-      path: "/technologies",
+      link: "#technologies",
     },
     {
       id: 3,
       text: "HOW TO",
-      path: "/how-to",
+      link: "#processes",
     },
     {
       id: 4,
       text: "JOIN HYDRA",
-      path: "/join-hydra",
+      link: "#join-hydra",
+
     },
   ],
   socialPages: [

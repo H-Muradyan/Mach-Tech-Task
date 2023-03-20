@@ -20,6 +20,9 @@ const Header = () => {
     setShowMobNav((prev) => !prev);
   };
 
+
+
+
   useEffect(() => {
     const closeMobileNav = (e) => {
       if (widthSize < 768 && myRef.current.id !== e.target.id) {
@@ -28,11 +31,10 @@ const Header = () => {
     };
     document.body.addEventListener("click", closeMobileNav);
     return () => document.body.removeEventListener("click", closeMobileNav);
-  }, []);
+  }, [widthSize]);
 
   return (
     <header className="relative px-5 lg:px-10 xl:px-20">
-   
       <div className="flex relative z-10 justify-between pt-6 items-center">
         <HeadeLogo widthSize={widthSize} />
         {widthSize < 768 ? (
@@ -48,8 +50,8 @@ const Header = () => {
           <>
             <Navbar headerNav={headerNav} />
             <div className="space-x-3 lg:space-x-9">
-              <Button text="CONTACT US" path="/contact-us" />
-              <Button text="JOIN HYDRA" path="/join-hydra" />
+              <Button text="CONTACT US" path="#contact-us" />
+              <Button text="JOIN HYDRA" path="#join-hydra" />
             </div>
           </>
         )}

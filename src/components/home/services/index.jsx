@@ -11,7 +11,7 @@ const Services = () => {
 
   const { services } = servicesDatas;
   return (
-    <div className="relative mt-16 md:mt-24 px-1.5 md:px-5 lg:px-10 xl:px-20">
+    <div id="services" className="relative mt-16 md:mt-24 px-1.5 md:px-5 lg:px-10 xl:px-20 max-w-md m-auto md:max-w-full">
       <TitleDesc data={servicesDatas} />
       <div className="relative md:static px-7 md:px-0 grid grid-cols-4 gap-x-4 md:gap-y-6 lg:gap-y-0 md:grid-cols-12 place-items-center mt-7 md:mt-24">
         {widthSize > 767 ? (

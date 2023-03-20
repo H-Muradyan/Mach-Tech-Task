@@ -22,7 +22,6 @@ const Carousel = ({ component: Component, datas }) => {
         datas.map(
           (data) => data.id === index && <Component key={data.id} data={data} />
         )}
-
       <div className="absolute right-0">
         <CircleButton action={nextClick} icon={rightArrow} />
       </div>

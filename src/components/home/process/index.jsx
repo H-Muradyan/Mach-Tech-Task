@@ -11,9 +11,9 @@ const Process = () => {
   const { processes } = processDatas;
 
   return (
-    <div className="mt-14 md:mt-16 px-5 lg:px-10 xl:px-20">
+    <div id="processes" className="mt-14 md:mt-16 px-1.5 md:px-5 lg:px-10 xl:px-20 max-w-md m-auto md:max-w-full">
       <TitleDesc data={processDatas} />
-      <div className="grid grid-cols-4 gap-x-4 md:grid-cols-12 md:gap-y-6 lg:gap-y-0 mt-9 md:mt-28 place-items-end lg:place-items-start">
+      <div className="px-2 md:px-0 relative grid grid-cols-4 gap-x-4 md:grid-cols-12 md:gap-y-6 lg:gap-y-0 mt-9 md:mt-28 place-items-end lg:place-items-start">
         {widthSize > 767 ? (
           processes.length &&
           processes.map((process) => (
@@ -23,7 +23,7 @@ const Process = () => {
           <Carousel component={ProcessCard} datas={processes} />
         )}
         {widthSize > 1023 && (
-          <div className="absolute -z-10 w-screen -left-2.5">
+          <div className="absolute -z-10 w-screen -left-10 xl:-left-20">
             <img src={processLine} alt="line" />
           </div>
         )}

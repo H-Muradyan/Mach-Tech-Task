@@ -16,14 +16,26 @@ const HeroImage = ({ widthSize }) => {
   return (
     <div className="grid col-span-4 md:col-start-8 md:col-span-5 place-items-center md:mb-0">
       <img
-        className="bg-imgBackground p-2 md:p-4 rounded-mix"
-        src={widthSize < 768 ? heroImgMob : heroImg}
+        className="bg-imgBackground p-2 lg:p-4 rounded-mix"
+        src={widthSize < 1024 ? heroImgMob : heroImg}
         alt="hero-image"
       />
-   <div className="absolute w-full left-0 top-0 -z-10 flex justify-center md:justify-end">
-        <img src={widthSize < 1024 ? lineMob1 : line1} alt="asd" className="absolute " />
-        <img src={widthSize < 1024 ? lineMob2 : line2} alt="asd" className="absolute top-[77px] " />
-        <img src={widthSize < 1024 ? lineMob3 : line3} alt="asd" className="absolute top-72 md:top-[320px] lg:top-[420px]" />
+      <div className="absolute w-full left-0 top-0 -z-10 flex justify-center md:justify-end">
+        <img
+          src={widthSize < 1024 ? lineMob1 : line1}
+          alt="vector"
+          className="absolute md:right-16 lg:right-36"
+        />
+        <img
+          src={widthSize < 1024 ? lineMob2 : line2}
+          alt="vector"
+          className="absolute top-20 md:top-36 lg:top-44"
+        />
+        <img
+          src={widthSize < 1024 ? lineMob3 : line3}
+          alt="vector"
+          className="absolute top-72 md:top-80 lg:top-105"
+        />
       </div>
     </div>
   );

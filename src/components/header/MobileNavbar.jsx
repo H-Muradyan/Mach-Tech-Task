@@ -1,9 +1,6 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
 
 const MobileNavbar = ({ showMobNav, headerNav }) => {
-  const { pathname } = useLocation();
-
   return (
     <nav
       className={`${
@@ -12,15 +9,13 @@ const MobileNavbar = ({ showMobNav, headerNav }) => {
     >
       {headerNav &&
         headerNav.map((nav) => (
-          <Link
-            className={`${
-              pathname === nav.path && "bg-mobNavBg"
-            } text-white hover:bg-mobNavBg w-full text-center py-3`}
+          <a
+            href={nav.link}
+            className={`cursor-pointer text-white hover:bg-mobNavBg w-full text-center py-3`}
             key={nav.id}
-            to={nav.path}
           >
             {nav.text}
-          </Link>
+          </a>
         ))}
     </nav>
   );
